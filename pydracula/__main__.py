@@ -4,6 +4,7 @@ from pydracula.controllers.SingleApplication import SingleApplication
 from pydracula.controllers.main_window import MainWindow
 from PySide6.QtGui import QFont, QFontDatabase
 import gettext
+from pydracula.controllers.splash_screen import SplashScreen
 from pydracula.model.db import createDB
 from os import environ, getenv
 
@@ -57,7 +58,8 @@ def main():
     # app.messageReceived.connect(lambda result: window.xdgOpenChat(result))
 
     # Create main window
-    window = MainWindow(app)
+    # window = MainWindow(app)
+    window = SplashScreen(app)
     app.setWindow(window)
     app.setActivationWindow(window)
     # window.loadSettings()
