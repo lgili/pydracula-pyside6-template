@@ -1,0 +1,58 @@
+app-id: com.lgili.pydracula
+runtime: org.kde.Platform
+runtime-version: "6.3"
+sdk: org.kde.Sdk
+base: com.riverbankcomputing.PyQt.BaseApp
+base-version: "6.3"
+command: pydracula
+finish-args:
+  - "--share=ipc"
+  - "--socket=wayland"
+  - "--socket=fallback-x11"
+  - "--socket=pulseaudio"
+  - "--share=network"
+  - "--share=network"
+  - "--device=all"
+  - "--device=dri"
+  - "--filesystem=host"
+  - "--filesystem=xdg-download"
+  - "--talk-name=org.freedesktop.Notifications"
+  - "--talk-name=org.kde.StatusNotifierWatcher"
+  - "--talk-name=org.kde.StatusNotifierItem"
+  - "--talk-name=org.freedesktop.portal.FileChooser"
+  - "--talk-name=com.canonical.AppMenu.Registrar"
+  - "--talk-name=com.canonical.Unity"
+  - "--talk-name=com.canonical.indicator.application"
+  - "--talk-name=org.ayatana.indicator.application"
+  - "--unset-env=XDG_DATA_HOME"
+  - "--env=QT_PLUGIN_PATH=/app/lib64/plugins:/app/lib/plugins"
+  - "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess"
+  
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - '*.la'
+  - '*.a'
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
+modules:       
+  - name: reproduce
+    buildsystem: simple
+    build-commands:
+      - pip3 install --prefix=${FLATPAK_DEST} PySide6
+
+  - name: pydracula
+    buildsystem: simple
+    build-commands:
+      - pip3 install --prefix=${FLATPAK_DEST} .
+      - install -Dm644 share/icons/${FLATPAK_ID}.png ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm644 share/applications/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 share/metainfo/${FLATPAK_ID}.appdata.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml
+    sources:
+      - type: git
+        url: https://github.com/lgili/pydracula-pyside6-template.git
+        branch: master
+
+build-options:
+  build-args:
+  - --share=network

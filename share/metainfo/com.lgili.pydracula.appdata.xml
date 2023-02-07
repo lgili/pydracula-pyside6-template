@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.lgili.pydracula</id>
+  <launchable type="desktop-id">com.lgili.pydracula.desktop</launchable>
+
+  <name>PyDracula</name>
+  <summary>PyDracula Theme for PySide6</summary>
+
+  <update_contact>luizcarlosgili@gmail.com</update_contact>
+  <developer_name>Luiz CArlos Gili</developer_name>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <content_rating type="oars-1.0" />
+
+  <description>
+    <p>
+      Much faster, more beautiful and more powerful.
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Features come with Whatsapp web</li>
+      <li>Multiple users</li>
+      <li>Icon in systray with different icon if there is new messages</li>
+      <li>Customizable Systray icons</li>
+      <li>System style (light and dark)</li>
+      <li>Fullscreen mode</li>
+      <li>Background running</li>
+      <li>Spellchecker</li>
+      <li>Drag and drop</li>
+      <li>Work area notifications</li>
+      <li>Personalized window decoration</li>
+      <li>Shortcuts for the main options</li>
+    </ul>
+    <p>What doesn't include: Video calls and On-call calls</p>
+  </description>
+
+  <categories>
+    <category>Chat</category>
+    <category>Communication</category>
+    <category>InstantMessaging</category>
+    <category>Utility</category>
+    <category>Office</category>
+  </categories>
+
+  <url type="homepage">https://github.com/lgili/pydracula-pyside6-template</url>
+  <url type="bugtracker">https://github.com/lgili/pydracula-pyside6-template/issues</url>
+  <!-- <url type="donation">https://github.com/sponsors/rafatosta</url> -->
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Application showcase</caption>
+      <image type="source">https://raw.githubusercontent.com/lgili/pydracula-pyside6-template/main/share/screenshot/dark.png</image>
+    </screenshot>
+  </screenshots>
+
+  <releases> 
+    <release date="2023-02-10" version="1.0">
+      <description>
+        <p>First release.</p>
+      </description>
+    </release>
+  </releases>
+</component>

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=PyDracula
+Comment[pt_BR]=PyDracula Theme for PySide6
+Comment=PyDracula Theme for PySide6
+Exec=pydracula %u
+Icon=com.lgili.pydracula
+Type=Application
+Categories=PySide6;Qt;
+Keywords=PyDracula;PySide6;PyQt;
+StartupWMClass=pydracula
+MimeType=x-scheme-handler/pydracula
+Terminal=false
+X-GNOME-UsesNotifications=true
+X-GNOME-SingleWindow=true

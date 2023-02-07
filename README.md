@@ -7,9 +7,24 @@
 
 # PyDracula - Modern GUI PySide6 / PyQt6
 # 
+This project was based on [Pydracula](https://github.com/Wanderson-Magalhaes/Modern_GUI_PyDracula_PySide6_or_PyQt6).
+## Features
+* PySide6
+* PyDracula Theming (Dark/Light)
+* Splash Screen
+* Packaging for Windows, Linux and Flatpak
 
+
+#
+> ## :gift: **//// DONATE ////**
+> ## 🔗 Donate (Gumroad): https://gum.co/mHsRC
+> This interface is free for any use, but if you are going to use it commercially, consider helping to maintain this project and others with a donation by Gumroado at the link above. This helps to keep this and other projects active.
 
 > **Warning**: this project was created using PySide6 and Python 3.9, using previous versions can cause compatibility problems.
+
+# YouTube - Presentation And Tutorial
+Presentation and tutorial video with the main functions of the user interface.
+> 🔗 https://youtu.be/9DnaHg4M_AM
 
 
 # Multiple Themes
@@ -38,12 +53,17 @@ python3 run.py
 # Compiling
 > ## **Windows**:
 ```console
-python setup.py windows
+python setup.py -s windows
 ```
 
 > ## **linux**:
 ```console
-python setup.py linux
+python setup.py -s linux
+```
+
+> ## **Flatpak**:
+```console
+python setup.py -s flatpak
 ```
 
 # Project Files And Folders
@@ -57,22 +77,16 @@ python setup.py linux
 
 > **themes/**: add here your themes (.qss).
 
-> **modules/**: module for running PyDracula GUI.
-
-> **modules/app_funtions.py**: add your application's functions here.
+> **controllers/app_funtions.py**: add your application's functions here.
 Up
-> **modules/app_settings.py**: global variables to configure user interface.
+> **controllers/app_settings.py**: global variables to configure user interface.
 
-> **modules/resources_rc.py**: "resource.qrc" file compiled for python using the command: ```pyside6-rcc resources.qrc -o resources_rc.py```.
+> **view/resources_rc.py**: "resource.qrc" file compiled for python using the command: ```pyside6-rcc resources.qrc -o resources_rc.py```.
 
-> **modules/ui_functions.py**: add here only functions related to the user interface / GUI.
+> **controllers/ui_functions.py**: add here only functions related to the user interface / GUI.
 
-> **modules/ui_main.py**: file related to the user interface exported by Qt Designer. You can compile it manually using the command: ```pyside6-uic main.ui> ui_main.py ```.
+> **view/ui_main.py**: file related to the user interface exported by Qt Designer. You can compile it manually using the command: ```pyside6-uic main.ui> ui_main.py ```.
 After expoting in .py and change the line "import resources_rc" to "from . resources_rc import *" to use as a module.
 
-> **images/**: put all your images and icons here before converting to Python (resources_re.py) ```pyside6-rcc resources.qrc -o resources_rc.py```.
-
-
-
-
+> **assets/**: put all your images and icons here before converting to Python (resources_re.py) ```pyside6-rcc resources.qrc -o resources_rc.py```.
 
