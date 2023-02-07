@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width="32px" height="32px" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222"
+	preserveAspectRatio="xMidYMid" version="1.2" viewBox="0 0 7e3 7e3" xml:space="preserve"
+	xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export">
+	<defs class="ClipPathGroup">
+		<clipPath id="a">
+			<rect width="7e3" height="7e3" />
+		</clipPath>
+	</defs>
+	<defs class="TextShapeIndex">
+	</defs>
+	<defs class="EmbeddedBulletChars">
+	</defs>
+	<g class="Master_Slide">
+	</g>
+	<g class="SlideGroup">
+		<g class="Slide" clip-path="url(#a)">
+			<g class="Page">
+				<g class="com.sun.star.drawing.ClosedBezierShape">
+					<g>
+						<rect class="BoundingBox" x="134" y="143" width="6773" height="6773" fill="none" />
+						<path
+							d="m5696 935c302 253 558 557 756 901 298 515 454 1099 454 1693s-156 1178-454 1693c-297 515-724 942-1239 1239-515 298-1099 454-1693 454s-1178-156-1693-454c-515-297-942-724-1239-1239-298-515-454-1099-454-1693s156-1178 454-1693c178-309 403-586 665-822l864 919c-168 150-312 327-426 524-187 323-285 689-285 1062 0 374 98 740 285 1063 186 323 455 592 778 778 323 187 689 285 1063 285 373 0 739-98 1062-285 323-186 592-455 778-778 187-323 285-689 285-1063 0-373-98-739-285-1062-134-232-309-436-518-601l842-921zm-1440 586c-67-24-134-45-203-62v1626c1 10 1 21 1 32 0 93-24 183-71 264-46 80-112 146-192 192-81 47-171 71-264 71s-183-24-263-71c-81-46-147-112-193-192-42-73-66-155-70-238h-1v-26-1655h-2l6-988 1-1c4-53 19-104 46-150 31-53 75-97 128-128 49-28 103-44 159-47h1c60-3 120-5 181-5 561 0 1112 139 1605 405l-869 973z"
+							fill="#3fb750" />
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
