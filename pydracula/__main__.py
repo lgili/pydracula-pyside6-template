@@ -10,11 +10,11 @@ from os import environ, getenv
 
 from pydracula.model.repository.database import SQLiteRepository
 from pydracula.model.notes import Note
-import asyncio
-_ACTIVE_NOTES = {}
 
 
-async def main():
+
+
+def main():
 
     # When running outside Flatpak
     if not pydracula.isFlatpak:
@@ -66,4 +66,4 @@ async def main():
     sys.exit(app.exec())
 
 if __name__ == "__main__":
-    asyncio.run(main())
+   main()

@@ -14,10 +14,12 @@ try:
                   'pydracula.controllers.main_window_decoration',                 
                   'pydracula.themes',
                   'pydracula.view',
-                  'pydracula.model'],
+                  'pydracula.model',
+                  'pydracula.model.repository'],
         include_package_data=True,
         package_data={'pydracula': ['pydracula/assets/icons/*.svg',
-                                 'pydracula/assets/icons/*.png'
+                                 'pydracula/assets/icons/*.png',
+                                  'data/*.db'
                                  ]},
         setup_requires=setup_requires,
         entry_points={'gui_scripts': ['pydracula = pydracula.__main__:main']},

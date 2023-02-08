@@ -2,8 +2,6 @@
   <qresource prefix="images">
     <file>../assets/images/PyDracula.png</file>
     <file>../assets/images/PyDracula_vertical.png</file>
-    <file>../assets/images/logo.png</file>
-    <file>../assets/images/favicon.svg</file>
   </qresource>
   <qresource prefix="icons">
     <file>../assets/icons/cil-3d.png</file>

@@ -8,7 +8,7 @@ class SQLiteRepository(Repository):
         Repository.__init__(self, model_cls)
 
     def engine_factory(self):
-        return create_engine('sqlite:///notes.db', echo=True)
+        return create_engine('sqlite:///data/sqlite.db', echo=True)
 
 
 class MySQLRepository(Repository):

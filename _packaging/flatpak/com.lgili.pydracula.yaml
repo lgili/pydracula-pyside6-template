@@ -36,10 +36,15 @@ cleanup:
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 modules:       
-  - name: reproduce
+  - name: PySide6
     buildsystem: simple
     build-commands:
       - pip3 install --prefix=${FLATPAK_DEST} PySide6
+
+  - name: sqlalchemy
+    buildsystem: simple
+    build-commands:
+      - pip3 install --prefix=${FLATPAK_DEST} sqlalchemy    
 
   - name: pydracula
     buildsystem: simple
