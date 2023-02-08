@@ -13,6 +13,7 @@ This project was based on [Pydracula](https://github.com/Wanderson-Magalhaes/Mod
 * PyDracula Theming (Dark/Light)
 * Splash Screen
 * Packaging for Windows, Linux and Flatpak
+* Database repository with sqlalchemy (SQLite, Postgres, MySQL)
 
 
 #

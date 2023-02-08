@@ -19,24 +19,7 @@ class SingleApplication(QApplication):
         self._inSocket = None
         self._inStream = None
         self._server = None
-        self.window = None
-
-        if self._isRunning:
-            self._outStream = QTextStream(self._outSocket)
-            # for link in argv[0]:
-            #     if 'whatsapp' in link:
-            #         self.sendMessage(link)
-            #         break
-            sys.exit(0)
-        else:
-            error = self._outSocket.error()
-            if error == QLocalSocket.LocalSocketError.ConnectionRefusedError:
-                self.close()
-                QLocalServer.removeServer(self._appid)
-            self._outSocket = None
-            self._server = QLocalServer()
-            self._server.listen(self._appid)
-            # self._server.newConnection.connect(self._onNewConnection)
+        self.window = None       
 
     def close(self):
         if self._inSocket:
@@ -67,34 +50,7 @@ class SingleApplication(QApplication):
         self._activationWindow.show()
         self._activationWindow.raise_()
         self._activationWindow.activateWindow()
-
-    # def sendMessage(self, msg):
-    #     if not self._outStream:
-    #         return False
-    #     self._outStream << msg << '\n'
-    #     self._outStream.flush()
-    #     return self._outSocket.waitForBytesWritten()
-
-    # @Slot()
-    # def _onNewConnection(self):
-    #     if self._inSocket:
-    #         self._inSocket.readyRead.disconnect(self._onReadyRead)
-    #     self._inSocket = self._server.nextPendingConnection()
-    #     if not self._inSocket:
-    #         return
-    #     self._inStream = QTextStream(self._inSocket)
-    #     self._inSocket.readyRead.connect(self._onReadyRead)
-    #     if self._activateOnMessage:
-    #         self.activateWindow()
-
-    # @Slot()
-    # def _onReadyRead(self):
-    #     while True:
-    #         msg = self._inStream.readLine()
-    #         if not msg:
-    #             break
-    #         self.messageReceived.emit(msg)
-
+    
     def setWindow(self, window):
         self.window = window
 
