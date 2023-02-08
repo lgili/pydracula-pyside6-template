@@ -9,13 +9,36 @@
 # 
 This project was based on [Pydracula](https://github.com/Wanderson-Magalhaes/Modern_GUI_PyDracula_PySide6_or_PyQt6).
 ## Features
+* Compatible with Python **3.8+**
 * PySide6
 * PyDracula Theming (Dark/Light)
 * Splash Screen
+* Resources compiled ahead of time:
+  * Final build only consists of Python files
 * Packaging for Windows, Linux and Flatpak
 * Database repository with sqlalchemy (SQLite, Postgres, MySQL)
 
+# Development Setup
 
+## First Steps
+
+1. Set up the development environment for your OS (please look [here](docs/) for a guide)
+2. Run `python run.py` to start the app
+3. Run `python build.py -h` to see all system supported to package
+4. Run `python build.py -s linux` to generate package for linux
+
+## Read Further
+
+* Qt6: https://doc.qt.io/
+* Python: https://www.python.org/
+* PySide6: https://doc.qt.io/qtforpython/contents.html
+* Scripting: https://doc.qt.io/qt-6/topics-scripting.html
+
+# Dependencies
+
+* PySide6 https://pypi.org/project/PySide6/
+* PyTest https://pypi.org/project/pytest/
+  
 #
 > ## :gift: **//// DONATE ////**
 > ## 🔗 Donate (Gumroad): https://gum.co/mHsRC
