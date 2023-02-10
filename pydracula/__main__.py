@@ -12,8 +12,6 @@ from pydracula.model.repository.database import SQLiteRepository
 from pydracula.model.notes import Note
 
 
-
-
 def main():
 
     # When running outside Flatpak
@@ -25,14 +23,6 @@ def main():
         elif XDG_SESSION_TYPE is None:
             environ['QT_QPA_PLATFORM'] = 'xcb'
 
-    # Local Debug (python -m pydracula --appDebug)
-    if '--appDebug' in sys.argv:
-        # Settings for Debug
-        import os
-        os.environ['XCURSOR_SIZE'] = '24'
-        os.environ['XCURSOR_THEME'] = 'Fluent-cursor'
-        os.environ['QT_QPA_PLATFORM'] = 'xcb'
-        os.environ['QTWEBENGINE_REMOTE_DEBUGGING'] = '12345'
 
     # Create Database
     sqlite = SQLiteRepository(Note)
