@@ -1,0 +1,10 @@
+{
+    "app_name": "pydracula",
+    "author": "Lgili",
+    "python_path": "src",
+    "main_module": "pydracula",
+    "freeze_dir": "target/pydracula",
+    "version": "0.0.0",
+    "hidden_imports": [],
+    "files_to_filter": []
+}

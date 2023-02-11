@@ -19,7 +19,6 @@ export
 .vscode
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 target/

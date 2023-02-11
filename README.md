@@ -21,12 +21,18 @@ This project was based on [Pydracula](https://github.com/Wanderson-Magalhaes/Mod
 # Development Setup
 
 ## First Steps
-
 1. Set up the development environment for your OS (please look [here](docs/) for a guide)
-2. Run `python run.py` to start the app
-3. Run `python build.py -h` to see all system supported to package
-4. Run `python build.py -s linux` to generate package for linux
+### with python
+1. Run `python run.py` to start the app
+<!-- 2. Run `python build.py -h` to see all system supported to package -->
+<!-- 3. Run `python build.py -s linux` to generate package for linux -->
+### with ppt
+The project use ppt to package the app, read more on https://github.com/lgili/python-packaging-tool
+So you can run the app with the client too
+1. Run `ppt run`
 
+Always the the .ui or resources files is changed is necessary to run `./_scripts/build-windows.sh`
+If you run the app with `python run.py`, the script will update automatically
 ## Read Further
 
 * Qt6: https://doc.qt.io/
@@ -38,9 +44,12 @@ This project was based on [Pydracula](https://github.com/Wanderson-Magalhaes/Mod
 
 * PySide6 https://pypi.org/project/PySide6/
 * PyTest https://pypi.org/project/pytest/
+* ppt https://github.com/lgili/python-packaging-tool
 
 ## For package
-The project use ppt to package the app, read more on https://github.com/lgili/python-package-tool
+The project use ppt to package the app, read more on https://github.com/lgili/python-packaging-tool
+1. `ppt freeze` to generate dependencies for pyinstaller
+2. `ppt installer` to to generate the installer
 ### Windows
 * nsis https://nsis.sourceforge.io/Download
   

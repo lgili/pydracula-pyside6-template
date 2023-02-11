@@ -10,5 +10,5 @@ os.system('./_scripts/build-windows.sh')
 debug = True
 
 # Run the app
-os.system('python -m pydracula ' + ('--appDebug' if debug ==
+os.system('python  src/pydracula ' + ('--appDebug' if debug ==
           True else ''))
