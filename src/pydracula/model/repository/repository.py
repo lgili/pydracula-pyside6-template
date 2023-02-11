@@ -35,11 +35,12 @@ class RepositoryInterface(abc.ABC):
 
 
 class Repository(RepositoryInterface):
-    def __init__(self, model_cls):
-        engine = self.engine_factory()
-        Base.metadata.create_all(engine)
-        self.session = Session(bind=engine)
+    def __init__(self, model_cls):        
         self.model_cls = model_cls
+        engine = self.engine_factory()
+       # Base.metadata.create_all(engine)
+        self.session = Session(bind=engine)
+        
 
     def create(self, *args, **kwargs):
         obj = self.model_cls(*args, **kwargs)

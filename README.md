@@ -38,6 +38,11 @@ This project was based on [Pydracula](https://github.com/Wanderson-Magalhaes/Mod
 
 * PySide6 https://pypi.org/project/PySide6/
 * PyTest https://pypi.org/project/pytest/
+
+## For package
+The project use ppt to package the app, read more on https://github.com/lgili/python-package-tool
+### Windows
+* nsis https://nsis.sourceforge.io/Download
   
 #
 > ## :gift: **//// DONATE ////**

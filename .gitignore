@@ -22,6 +22,7 @@ export
 build/
 develop-eggs/
 dist/
+target/
 downloads/
 eggs/
 .eggs/

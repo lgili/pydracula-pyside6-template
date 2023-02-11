@@ -1,5 +1,9 @@
 from setuptools import setup
-import pydracula
+from pathlib import Path
+import sys
+path_root = './src'
+sys.path.append(str(path_root))
+import src.pydracula
 setup_requires = ['setuptools']
 try:
     setup(

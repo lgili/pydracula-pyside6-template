@@ -1,5 +1,9 @@
 
+from pathlib import Path
 import sys
+path_root = Path(__file__).parents[1]
+sys.path.append(str(path_root))
+
 import pydracula
 from pydracula.controllers.SingleApplication import SingleApplication
 from pydracula.controllers.main_window import MainWindow
@@ -8,29 +12,25 @@ import gettext
 from pydracula.controllers.splash_screen import SplashScreen
 from os import environ, getenv
 
-from pydracula.model.repository.database import SQLiteRepository
-from pydracula.model.notes import Note
+
 
 
 def main():
 
     # When running outside Flatpak
-    if not pydracula.isFlatpak:
-        # Session Type
-        XDG_SESSION_TYPE = getenv('XDG_SESSION_TYPE')
-        if XDG_SESSION_TYPE == 'wayland':
-            environ['QT_QPA_PLATFORM'] = 'wayland'
-        elif XDG_SESSION_TYPE is None:
-            environ['QT_QPA_PLATFORM'] = 'xcb'
+    #if not pydracula.isFlatpak:
+    #    # Session Type
+    #    XDG_SESSION_TYPE = getenv('XDG_SESSION_TYPE')
+    #    if XDG_SESSION_TYPE == 'wayland':
+    #        environ['QT_QPA_PLATFORM'] = 'wayland'
+    #    elif XDG_SESSION_TYPE is 'te_y':
+    #        environ['QT_QPA_PLATFORM'] = 'windows'    
+    #    elif XDG_SESSION_TYPE is None:
+    #        environ['QT_QPA_PLATFORM'] = 'xcb'
 
 
-    # Create Database
-    sqlite = SQLiteRepository(Note)
-    sqlite.engine_factory()
-    sqlite.create(text="Documentos", x="mac", y="moc")
-    existing_notes = sqlite.list()
-    print(str(existing_notes))
 
+   
     # Define application attributes
     app = SingleApplication(pydracula.__appid__, sys.argv)
     app.setApplicationName(pydracula.__appname__)
@@ -52,6 +52,10 @@ def main():
     else:
         window.show()
 
+     # Create Database
+   
+    
+      
     # Start app
     sys.exit(app.exec())
 

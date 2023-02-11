@@ -5,6 +5,8 @@ from PySide6.QtGui import QColor
 import pydracula
 from pydracula.view.ui_splash_screen import Ui_SplashScreen
 from pydracula.controllers.main_window import MainWindow
+from pydracula.model.repository.database import SQLiteRepository
+from pydracula.model.notes import Note
 
 ## ==> GLOBALS
 counter = 0
@@ -48,6 +50,7 @@ class SplashScreen(QMainWindow):
 
         # Change Texts
         QTimer.singleShot(1500, lambda: self.ui.label_description.setText("<strong>LOADING</strong> DATABASE"))
+        self.startDatabase()
         QTimer.singleShot(3000, lambda: self.ui.label_description.setText("<strong>LOADING</strong> USER INTERFACE"))
 
 
@@ -79,3 +82,14 @@ class SplashScreen(QMainWindow):
 
         # INCREASE COUNTER
         counter += 1
+
+
+    def startDatabase(self):
+       sqlite = SQLiteRepository(Note)
+       try:
+           sqlite.create(text="Documentos", x="mac", y="moc")
+           existing_notes = sqlite.list()
+           print(str(existing_notes))
+        
+       except:
+          print('An exception occurred')

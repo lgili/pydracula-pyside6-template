@@ -4,6 +4,7 @@ from PySide6.QtNetwork import QLocalServer, QLocalSocket
 import sys
 
 
+
 class SingleApplication(QApplication):
     messageReceived = Signal(str)
 
@@ -56,3 +57,5 @@ class SingleApplication(QApplication):
 
     def getWindow(self):
         return self.window
+
+        

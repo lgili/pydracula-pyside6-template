@@ -2,11 +2,11 @@
 from cx_Freeze import setup, Executable
 
 # ADD FILES
-files = ['icon.ico','themes/']
+files = ['icon.ico','pydracula/themes/']
 
 # TARGET
 target = Executable(
-    script="main.py",
+    script="run.py",
     base="Win32GUI",
     icon="icon.ico"
 )
