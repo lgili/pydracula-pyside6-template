@@ -7,7 +7,9 @@
 ## Checkout
 
 1. Clone this repository
-1. Set up virtual environment:
-    1. `python -m venv venv`
-    1. `source venv/bin/activate` (*bash*) or `source venv/bin/activate.fish` (*fish*)
-1. Install requirements `python -m pip install -r requirements.txt`
+2. Set up virtual environment:
+    1. `sudo apt-get install python3.11`
+    2. `sudo apt-get install python3.11-venv`
+    3. `python3.11 -m venv venv`
+    4. `source venv/bin/activate` (*bash*) or `source venv/bin/activate.fish` (*fish*)
+3. Install requirements `python -m pip install -r requirements.txt`
