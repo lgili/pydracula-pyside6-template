@@ -4,7 +4,7 @@ from gettext import gettext as _
 ################################################################################
 ## Form generated from reading UI file 'splash_screen.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.4
+## Created by: Qt User Interface Compiler version 6.5.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################

@@ -3,6 +3,8 @@
     "description": "",
     "author_email": "",
     "url": "",
-    "installer": "ubuntu",
+    "files_to_filter": [
+        "@{build_system_dir}/installer/linux/usr/share/applications/AppName.desktop"
+    ], 
     "depends": []
 }

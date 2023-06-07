@@ -1,0 +1,6 @@
+{
+    "installer": "pydracula.deb",
+    "gpg_preset_passphrase": "/usr/lib/gnupg2/gpg-preset-passphrase",
+    "repo_subdir": "deb",
+    "version": "1.0.0"
+}
